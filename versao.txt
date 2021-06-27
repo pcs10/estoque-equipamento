@@ -1,9 +1,13 @@
 0.0.1
-Commit inicial de acordo com o curso que fiz na udemy.
-Só alterei a versão do laravel que antes era 5.6 para 8.47.
-Fiz as devidas alterações e mantive a tabela de curso de exemplo.
+1 - Commit inicial de acordo com o curso que fiz na udemy.
+    Só alterei a versão do laravel que antes era 5.6 para 8.47.
+    Fiz as devidas alterações e mantive a tabela de curso de exemplo.
 
 --------------------------------------------------------------------------------------------------
 0.0.2
-fiz o crud da tabela Tipo Equipamento
+1 - fiz o crud da tabela Tipo Equipamento
 --------------------------------------------------------------------------------------------------
+0.0.3
+1 - diretorio temp-migrate criado pra nao precisar rodar todas as migrações quando for fazer 
+    um acerto e sim, apenas algumas especificas. 
+2 - criação do modelo, migration e controller Equipamento. Está seco.
