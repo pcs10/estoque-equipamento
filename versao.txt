@@ -11,3 +11,6 @@
 1 - diretorio temp-migrate criado pra nao precisar rodar todas as migrações quando for fazer 
     um acerto e sim, apenas algumas especificas. 
 2 - criação do modelo, migration e controller Equipamento. Está seco.
+--------------------------------------------------------------------------------------------------
+0.0.4
+1 - subir versão antes de novas modificações

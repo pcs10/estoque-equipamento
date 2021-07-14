@@ -15,7 +15,15 @@ class CreateEquipamentosTable extends Migration
     {
         Schema::create('equipamentos', function (Blueprint $table) {
             $table->id();
+            $table->string('serial');
+            $table->string('descricao');
+            $table->string('aquisicao');
+            $table->enum('fl_disponivel', ['sim', 'nao'])->default('nao');
+            //relacao
+            $table->bigInteger('id_tipo_equipamento')->unsigned();
             $table->timestamps();
+            //criar a relação
+            $table->foreign('id_tipo_equipamento')->references('id')->on('tipo_equipamentos');
         });
     }
 
