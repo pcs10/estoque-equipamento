@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CursoController;
+use App\Http\Controllers\Admin\EquipamentoController;
 use App\Http\Controllers\Admin\TipoEquipamentoController;
 use App\Http\Controllers\Site\HomeController;
 use App\Http\Controllers\Site\LoginController;
@@ -71,5 +72,28 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/admin/tipos-equipamentos/deletar/{id}',
         [TipoEquipamentoController::class, 'deletar'])->name('admin.tipos-equipamentos.deletar');
+
+});
+
+/*---------------------| AUTENTICAÇÃO DE EQUIPAMENTOS |-----------------------*/
+Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('/admin/equipamentos',
+        [EquipamentoController::class, 'index'])->name('admin.equipamentos');
+
+    Route::get('/admin/equipamentos/adicionar',
+        [EquipamentoController::class, 'adicionar'])->name('admin.equipamentos.adicionar');
+
+    Route::post('/admin/equipamentos/salvar',
+        [EquipamentoController::class, 'salvar'])->name('admin.equipamentos.salvar');
+
+    Route::get('/admin/equipamentos/editar/{id}',
+        [EquipamentoController::class, 'editar'])->name('admin.equipamentos.editar');
+
+    Route::put('/admin/equipamentos/atualizar/{id}',
+        [EquipamentoController::class, 'atualizar'])->name('admin.equipamentos.atualizar');
+
+    Route::get('/admin/equipamentos/deletar/{id}',
+        [EquipamentoController::class, 'deletar'])->name('admin.equipamentos.deletar');
 
 });

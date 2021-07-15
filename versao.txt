@@ -14,3 +14,11 @@
 --------------------------------------------------------------------------------------------------
 0.0.4
 1 - subir versão antes de novas modificações
+2 - migracao de equipamentos criada relacionando a chave estrangeira
+--------------------------------------------------------------------------------------------------
+0.0.5
+1 - terminei o crud de equipamentos
+2 - o ID do tipo de equipamento to add pelo numero mesmo.
+    ainda nao fiz o tratamento pra puxar o nome do tipo de equipamento
+    pra ficar mais simples pro usuario.
+--------------------------------------------------------------------------------------------------
