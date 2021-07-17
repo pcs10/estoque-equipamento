@@ -12,6 +12,7 @@ class TipoEquipamentoController extends Controller
     {
 
         $registros = TipoEquipamento::all();
+        //var_dump($registros);
         return view('admin.tipos-equipamentos.index', compact('registros'));
 
         //return view('admin.cursos.index');

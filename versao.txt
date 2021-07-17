@@ -22,3 +22,9 @@
     ainda nao fiz o tratamento pra puxar o nome do tipo de equipamento
     pra ficar mais simples pro usuario.
 --------------------------------------------------------------------------------------------------
+0.0.6
+1 - acertos nos relacionamentos da tabela
+    mexendo no relacionamento dos models.
+2 - acerrto pra pegar nome do tipo de quipamento na view de equipamento
+--------------------------------------------------------------------------------------------------
+    
