@@ -27,4 +27,8 @@
     mexendo no relacionamento dos models.
 2 - acerrto pra pegar nome do tipo de quipamento na view de equipamento
 --------------------------------------------------------------------------------------------------
-    
+0.0.7
+1 - acerto nas views de equipamentos que contem checkbox
+2 - acertos nos dropdown de escolha de tipo de equipamento
+3 - crud basicão com duas tabelas finalizado  
+--------------------------------------------------------------------------------------------------

@@ -1,35 +1,47 @@
 <div class="input-field">
   <input type="text" name="serial" value="{{isset($registro->serial) ? $registro->serial : ''}}">
-<br>
+  <br>
   <label>Serial</label>
 </div>
 
 <div class="input-field">
   <input type="text" name="descricao" value="{{isset($registro->descricao) ? $registro->descricao : ''}}">
-<br>
+  <br>
   <label>Descricao</label>
 </div>
 
 <div class="input-field">
   <input type="text" name="aquisicao" value="{{isset($registro->aquisicao) ? $registro->aquisicao : ''}}">
-<br>
+  <br>
   <label>Aquisicao</label>
 </div>
 
 <div class="input-field">
-  <p>
-      <input type="checkbox" id="test5" name="fl_disponivel" 
-        {{isset($registro->fl_disponivel) && 
-        $registro->fl_disponivel == 'sim' ? 'checked' : '' }} value="true" />
-      <label for="test5">Disponivel?</label>
-    </p>
-    <br><br>
+  <label>
+    <input type="checkbox" id="test5" class="filled-in" name="fl_disponivel" {{isset($registro->fl_disponivel) &&
+    $registro->fl_disponivel == 'sim' ? 'checked' : '' }} value="true" />
+    <span for="test5">Disponivel?</span>
+  </label>
+  <br><br>
 </div>
 
-<div class="input-field">
-  <input type="number" name="id_tipo_equipamento" 
-  value="{{isset($registro->id_tipo_equipamento) ? $registro->id_tipo_equipamento : ''}}">
-<br>
-  <label>Id Tipo Equipamento</label>
-</div>
 
+@if(@isset($registrosTe))
+  <label>Tipo Equipamento</label>
+  <select required="required" class="browser-default" name="nome">
+    @foreach ($registrosTe as $te)
+      @if($te->id == $registro['id_tipo_equipamento'])
+        <option selected value="{{ $te->id }}">{{ $te->nome }}</option>
+      @else
+        <option value="{{ $te->id }}">{{ $te->nome }}</option>
+      @endif
+    @endforeach
+  </select>
+@else
+  <label>Tipo Equipamento</label>
+  <select required="required" class="browser-default" name="nome">
+    @foreach ($registros as $te)
+      <option value="{{ $te->id }}">{{ $te->nome }}</option>
+    @endforeach
+  </select>
+@endif

@@ -1,7 +1,9 @@
 @extends('layout.site')
 
-<!-- @section('titulo','Cursos') 
-Serve como o titulo la em cima da pagina-->
+{{-- 
+  @section('titulo','Cursos') 
+  Serve como o titulo la em cima da pagina 
+--}}
 @section('titulo','Equipamentos') 
 
 @section('conteudo')
